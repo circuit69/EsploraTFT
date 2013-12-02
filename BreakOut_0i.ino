@@ -88,9 +88,7 @@ void moveBall(void){
   for (int a=0; a<bricksWide; a++){
     for (int b=0; b<bricksTall; b++){
       if (brick[a][b]==HIGH){
-        //if (ballX>a*20+10-ballRadius & ballX<a*20+29+ballRadius & ballY>b*10+20-ballRadius & ballY<b*10+29+ballRadius+ballRadius){
         if (ballX>a*brickW+10-ballRadius & ballX<a*brickW+brickW+10 & ballY>b*brickH+10-ballRadius & ballY<b*brickH+brickH+10){
-          //Tft.fillRectangle(a*20+10,b*10+20,19,9,0);
           EsploraTFT.fill(0,0,0);
           EsploraTFT.rect(a*brickW+10,b*brickH+10,brickW,brickH);
           brick[a][b]=LOW;
@@ -197,14 +195,4 @@ void blocks(void){
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
 
