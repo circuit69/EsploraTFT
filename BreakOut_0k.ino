@@ -1,3 +1,9 @@
+/* EsploraTFT Break Out game by Joel Krueger 12-5-2013
+    Hardware is an Arduino Esplora http://arduino.cc/en/Main/ArduinoBoardEsplora
+    with an Adafruit 1.8" TFT breakout board http://www.adafruit.com/products/358
+    This code used the stock arduino libraries so the arduino TFT screen should work fine
+*/
+
 #include <Esplora.h>
 #include <TFT.h>
 #include <SPI.h>
