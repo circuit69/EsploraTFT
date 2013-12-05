@@ -1,12 +1,12 @@
 /* EsploraTFT Break Out game by Joel Krueger 12-5-2013
-
-    Use the Esplora slider to control the paddle
-    Press the left switch momentarily to turn sound on/off
-    
-    Hardware is an Arduino Esplora http://arduino.cc/en/Main/ArduinoBoardEsplora
-    with an Adafruit 1.8" TFT breakout board http://www.adafruit.com/products/358
-    This code used the stock arduino libraries so the arduino TFT screen should work fine
-*/
+ 
+ Use the Esplora slider to control the paddle
+ Press the left switch momentarily to turn sound on/off
+ 
+ Hardware is an Arduino Esplora http://arduino.cc/en/Main/ArduinoBoardEsplora
+ with an Adafruit 1.8" TFT breakout board http://www.adafruit.com/products/358
+ This code used the stock arduino libraries so the arduino TFT screen should work fine
+ */
 
 #include <Esplora.h>
 #include <TFT.h>
@@ -134,7 +134,7 @@ void moveBall(void){
   //check if the ball went past the paddle
   if (ballY>paddleY+10){
     if (sound == HIGH){
-    Esplora.tone(130,1000);
+      Esplora.tone(130,1000);
     }
     for (int i=0; i<200; i++){
       EsploraTFT.stroke(0,255,0);
@@ -153,11 +153,11 @@ void moveBall(void){
     EsploraTFT.fill(0,0,0);
     EsploraTFT.rect(ballX,ballY,ballRadius,ballRadius);
     if (sound == HIGH){
-    Esplora.tone(400,250);
-    delay(250);
-    Esplora.tone(415,250);
-    delay(250);
-    Esplora.tone(430,500);
+      Esplora.tone(400,250);
+      delay(250);
+      Esplora.tone(415,250);
+      delay(250);
+      Esplora.tone(430,500);
     }
     for (int i=0; i<500; i++){
       EsploraTFT.stroke(0,255,0);
@@ -213,4 +213,5 @@ void blocks(void){
     }
   }
 }
+
 
